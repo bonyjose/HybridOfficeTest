@@ -1,0 +1,110 @@
+<div class="main-content">
+  <div class="container-fluid">
+      <div class="row">
+          <div class="col-lg-3 col-md-6 col-sm-6">
+              <div class="card card-stats">
+                  <div class="card-header card-header-warning card-header-icon">
+                      <div class="card-icon">
+                          <i class="material-icons">apartment</i>
+                      </div>
+                      <p class="card-category">Team members in office</p>
+                      <h3 class="card-title">25
+                          <small></small>
+                      </h3>
+                  </div>
+                  <div class="card-footer">
+                    <div class="stats">
+                        <i class="material-icons">date_range</i> Last 24 Hours
+                    </div>
+                  </div>
+              </div>
+          </div>
+          <div class="col-lg-3 col-md-6 col-sm-6">
+              <div class="card card-stats">
+                  <div class="card-header card-header-success card-header-icon">
+                      <div class="card-icon">
+                          <i class="material-icons">home</i>
+                      </div>
+                      <p class="card-category">Seats available to book</p>
+                      <h3 class="card-title">75</h3>
+                  </div>
+                  <div class="card-footer">
+                      <div class="stats">
+                          <i class="material-icons">date_range</i> Last 24 Hours
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <div class="col-lg-3 col-md-6 col-sm-6">
+              <div class="card card-stats">
+                  <div class="card-header card-header-danger card-header-icon">
+                      <div class="card-icon">
+                          <i class="material-icons"> dangerous </i>
+                      </div>
+                      <p class="card-category">My Team</p>
+                      <h3 class="card-title"></h3>
+                  </div>
+                  <div class="card-footer">
+                      <div class="stats">
+                          <i class="material-icons">local_offer</i> From Calendar
+                      </div>
+                  </div>
+              </div>
+          </div>
+
+
+          <div class="col-lg-3 col-md-6 col-sm-6">
+              <div class="card card-stats">
+                  <div class="card-header card-header-info card-header-icon">
+                      <div class="card-icon">
+                        <i class="material-icons"> fact_check </i>
+                      </div>
+                      <p class="card-category">Requests in Queue</p>
+                      <h3 class="card-title">7</h3>
+                  </div>
+                  <div class="card-footer">
+                      <div class="stats">
+                          <i class="material-icons">update</i> Just Updated
+                      </div>
+                  </div>
+              </div>
+          </div>
+
+
+          <!-- <div class="container-fluid">
+            <div class="card-header card-header-success">
+                <h3 class="card-title">Pick a Date to Book Seat</h3>
+            </div>
+            <input matInput [matDatepicker]="dp" placeholder="Pick a Date" />
+            <mat-datepicker-toggle matSuffix [for]="dp"></mat-datepicker-toggle>
+            <mat-datepicker #dp></mat-datepicker>
+            </div> -->
+
+
+          <div class="main-content">
+            <div class="container-fluid">
+                <div class="card">
+                    <div class="card-header card-header-success">
+                        <h3 class="card-title">Manage Seat</h3>
+                    </div>
+
+                        <!-- SeatBook Component -->
+                    <div>
+                        <p class="card-category">Pick a Date to Book Seat For</p>
+                        <input matInput [matDatepicker]="dp" placeholder="Pick a Date" [(ngModel)]="dateSelected"  />
+                        <mat-datepicker-toggle matSuffix [for]="dp"></mat-datepicker-toggle>
+                        <mat-datepicker #dp></mat-datepicker>
+
+                        <div class="container-fluid" [class.disabled]="dateSelected == ''" >
+                        <app-seatBook></app-seatBook>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+          </div>
+
+
+      </div>
+  </div>
+</div>
